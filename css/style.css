@@ -23,17 +23,34 @@
     *Spacing System (px)
 2/ 4/ 8/ 12/ 24/ 32/ 48/ 64/ 80/ 96/ 128
 */
-:root {
-}
+/* :root {
+} */
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
+html {
+  /* (px)value / 16px = (rem)value / 100% = (%)value */
+  font-size: 62.5%;
+}
 body {
   font-family: sans-serif;
   line-height: 1; /*Does not have unit*/
   font-weight: 400;
   color: #555;
+}
+
+.hero {
+  /* NB this👇*/
+  max-width: 130rem;
+  margin: 0 auto;
+  /* 👆  */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* grid-template-columns: 1fr 1fr; */
+}
+.hero-img {
+  width: 100%;
 }
