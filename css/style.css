@@ -45,46 +45,47 @@ body {
   color: #555;
 }
 
-/* Hero Section */
-.section-hero {
-  background-color: #fdf2e9;
-  padding: 9.6rem 0; /*the first value is left/right and the second is top/bottom */
-}
-.hero {
-  /* NB this👇*/
-  max-width: 130rem;
+/*! Generial */
+/*todo these are for placing any container in the middle of the page and NB how the padding come before the margin 👇*/
+.container {
+  /* 1140px */
+  max-width: 120rem;
+  padding: 0 3.2rem;
   margin: 0 auto;
-  /* 👆  */
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  /* grid-template-columns: 1fr 1fr; */
-  gap: 9.6rem;
-  align-items: center;
 }
+/*👆 */
+
+/*todo our reusiable grid 👇*/
+.grid {
+  display: grid;
+  gap: 9.6rem;
+}
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+/*todo our reusiable grid 👆*/
+
 .heading-primary {
   font-size: 5.2rem;
   font-weight: 700;
   line-height: 1.05;
-  letter-spacing: -0.5px; /*I have never use this be4*/
+  letter-spacing: -0.5px; /*todo I have never use this be4*/
   color: #333;
   margin-bottom: 3.2rem;
 }
-.hero-description {
-  font-size: 2rem;
-  line-height: 1.6;
-  margin-bottom: 4.8rem;
-}
-
-/* What's it is above these two? (i.e link and visited) */
+/*todo What's it is above these two? (i.e link and visited) */
 .btn:link,
 .btn:visited {
   display: inline-block;
   text-decoration: none;
   font-size: 2rem;
   font-weight: 600;
-  padding: 1.6rem 3.2rem; /* NB <a> is a block element hence it requires a block styling*/
+  padding: 1.6rem 3.2rem; /*! NB <a> is a block element hence it requires a block styling*/
   border-radius: 9px;
-  /* NB 👇 */
+  /*! NB 👇 */
   transition: background-color 0.3s;
 }
 .btn--full:link,
@@ -104,9 +105,52 @@ body {
 .btn--outline:hover,
 .btn--outline:active {
   background-color: #fdf2e9;
-  /* To add border inside a button */
+  /*todo To add border inside a button */
   box-shadow: inset 0 0 0 3px #fff;
 }
+.margin-right-sm {
+  margin-right: 1.6rem !important;
+}
+
+/*! Header  */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fdf2e9;
+
+  /*! We should have used padding but later we will want our navagition to be sticky  */
+  height: 9.4rem;
+  padding: 0 4.8rem;
+}
+.logo {
+  height: 2.2rem;
+}
+
+/*! Hero Section */
+.section-hero {
+  background-color: #fdf2e9;
+  padding: 4.8rem 0 9.6rem 0; /*? the first value is left/right and the second is top/bottom */
+}
+.hero {
+  /*! NB this👇*/
+  max-width: 130rem;
+  margin: 0 auto;
+  padding: 0 3.2rem; /**? Spaceing on the sides when the page is reduce
+  /* 👆  */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* grid-template-columns: 1fr 1fr; */
+  gap: 9.6rem;
+  align-items: center;
+}
+
+.hero-description {
+  font-size: 2rem;
+  line-height: 1.6;
+  margin-bottom: 4.8rem;
+}
+
 .deliverd-meals {
   display: flex;
   justify-items: center;
@@ -120,7 +164,7 @@ body {
   height: 4.8rem;
   width: 4.8rem;
   border-radius: 50%;
-  margin-right: -1.6rem; /*Making this the negative value of the class "Delivered-meals (gap)" causes the over lap*/
+  margin-right: -1.6rem; /*todo Making this the negative value of the class "Delivered-meals (gap)" causes the over lap*/
   border: 3px solid #fdf2e9;
 }
 .delivered-imgs img:last-child {
@@ -136,6 +180,9 @@ body {
 .hero-img {
   width: 100%;
 }
-.margin-right-sm {
-  margin-right: 1.6rem !important;
+
+/*! Section How  */
+.section-how {
+  padding: 9.6rem 0;
+  background-color: orangered;
 }
