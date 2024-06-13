@@ -5,9 +5,19 @@
 
 *Font Weight
     Default: 400
+  Medium:  500
+  Semi-bold: 600
+  Bold: 700
 
 *Line heights
     Default: 1
+   Small: 1.05
+   medium: 1.2
+   Paragraph Default: 1.6
+
+*letter-spaceing
+-0.5px
+0.75px
 
 ---02 COLORS
 *Primary: #e67e22
@@ -22,6 +32,7 @@
 
 ---05 SHADOWS
 ---06 BORDER_RADIUS
+Default: 9px
 ---07 WHITESPACE
     *Spacing System (px)
 2/ 4/ 8/ 12/ 24/ 32/ 48/ 64/ 80/ 96/ 128
@@ -68,13 +79,31 @@ body {
 }
 /*todo our reusiable grid 👆*/
 
-.heading-primary {
-  font-size: 5.2rem;
+.heading-primary,
+.heading-secondary {
   font-weight: 700;
-  line-height: 1.05;
   letter-spacing: -0.5px; /*todo I have never use this be4*/
   color: #333;
+}
+.heading-primary {
+  font-size: 5.2rem;
+  line-height: 1.05;
   margin-bottom: 3.2rem;
+}
+.heading-secondary {
+  font-size: 4.4rem;
+  line-height: 1.2;
+  margin-bottom: 9.2rem;
+}
+.subheading {
+  /*todo This styling is for a span element which is a block element hence we display block */
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #cf711f;
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+  letter-spacing: 0.75px;
 }
 /*todo What's it is above these two? (i.e link and visited) */
 .btn:link,
@@ -112,6 +141,38 @@ body {
   margin-right: 1.6rem !important;
 }
 
+/*! Navigation */
+.main-nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+}
+.main-nav-link:link,
+.main-nav-link:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 1.8rem;
+  transition: all 0.3s;
+}
+.main-nav-link:hover,
+.main-nav-hov:active {
+  color: #cf711f;
+}
+.main-nav-link.nav-cta:link,
+.main-nav-link.nav-cta:visited {
+  padding: 1.2rem 2.4rem;
+  border-radius: 9px;
+  color: #fff;
+  background-color: #e67e22;
+}
+.main-nav-link.nav-cta:hover,
+.main-nav-link.nav-cta:active {
+  background-color: #cf711f;
+}
+
 /*! Header  */
 .header {
   display: flex;
@@ -140,7 +201,6 @@ body {
   /* 👆  */
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  /* grid-template-columns: 1fr 1fr; */
   gap: 9.6rem;
   align-items: center;
 }
@@ -184,5 +244,7 @@ body {
 /*! Section How  */
 .section-how {
   padding: 9.6rem 0;
-  background-color: orangered;
+}
+.step-img {
+  width: 50%;
 }
