@@ -34,6 +34,7 @@
 ---05 SHADOWS
 ---06 BORDER_RADIUS
 Default: 9px
+medium: 11px
 ---07 WHITESPACE
     *Spacing System (px)
 2/ 4/ 8/ 12/ 24/ 32/ 48/ 64/ 80/ 96/ 128
@@ -152,4 +153,8 @@ body {
 }
 .margin-right-sm {
   margin-right: 1.6rem !important;
+}
+
+strong {
+  font-weight: 600;
 }
