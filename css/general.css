@@ -134,6 +134,7 @@ body {
   letter-spacing: 0.75px;
 }
 /*todo What's it is above these two? (i.e link and visited) */
+.btn,
 .btn:link,
 .btn:visited {
   display: inline-block;
@@ -142,6 +143,12 @@ body {
   font-weight: 600;
   padding: 1.6rem 3.2rem; /*! NB <a> is a block element hence it requires a block styling*/
   border-radius: 9px;
+
+  /* Only for the btn */
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+
   /*! NB 👇 */
   /* transition: background-color 0.3s; dont do this instead do 👇 */
   transition: all 0.3s;
@@ -179,6 +186,13 @@ body {
 .link:active {
   color: #cf711f;
   border-bottom: 1px solid transparent;
+}
+*:focus {
+  outline: none;
+
+  /* Check out properties give to the focus 
+  */
+  box-shadow: 0 0 0 0.8rem rgba(230, 125, 34, 0.5);
 }
 .list {
   list-style: none;
