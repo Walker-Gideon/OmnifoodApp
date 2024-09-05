@@ -3,7 +3,7 @@
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 3.2rem;
+  gap: 4.8rem;
 }
 .main-nav-link:link,
 .main-nav-link:visited {
@@ -278,7 +278,6 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   row-gap: 4.8rem;
-  /* column-gap: 8rem; */
 }
 .testimonial-img {
   width: 6.4rem;

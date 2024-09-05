@@ -39,7 +39,7 @@
 Default: 9px
 medium: 11px
 ---07 WHITESPACE
-    *Spacing System (px)
+    *Spacing System (px) Padding
 2/ 4/ 8/ 12/ 24/ 32/ 48/ 64/ 80/ 96/ 128
 
 /*! Childe Elements are not added to images...Hence we use a div element to surround the image and then style it 😊 */
@@ -48,8 +48,8 @@ medium: 11px
 } */
 
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 html {
@@ -110,6 +110,7 @@ body {
   font-weight: 700;
   letter-spacing: -0.5px; /*todo I have never use this be4*/
   color: #333;
+  margin: 0;
 }
 .heading-primary {
   font-size: 5.2rem;
