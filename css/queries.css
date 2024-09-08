@@ -1,7 +1,6 @@
 /*! Below 1344px (Smaller Desktop) */
 @media (max-width: 84em) {
   .hero {
-    /* background-color: red; */
     max-width: 120rem;
   }
   .heading-primary {
@@ -13,10 +12,17 @@
   .testimonial-text {
     width: 100%;
   }
+  .header {
+    padding: 0 3.2rem;
+  }
+  .main-nav-list {
+    gap: 3.2rem;
+  }
 }
 
 
 /*! Below 1200px (Landscape Tablet) */
+/* @media (max-width: 75em) { */
 @media (max-width: 75em) {
   html {
     /* 9px / 16px = 0.5625 */
@@ -32,12 +38,12 @@
   .heading-tertiary {
     font-size: 2.4rem;
   }
-  .header {
+  /* .header {
     padding: 0 3.2rem;
   }
   .main-nav-list {
     gap: 3.2rem;
-  }
+  } */
   .hero {
     gap: 4.8rem;
   }
@@ -46,6 +52,119 @@
   }
   .testimonial-text {
     width: 100%;
+  }
+  .list {
+    justify-content: center;
+    padding: 0 2.4rem;
+  }
+}
+
+/*! Below 944px (Tablet) */
+/* @media (max-width: 59em) { 62em */
+@media (max-width: 62em) {
+  html {
+    /* 8px / 16px = 0.5625 */
+    font-size: 50%;
+  }
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 8rem;
+    gap: 6.4rem;
+  }
+  .hero-text-box,
+  .hero-img-box {
+    text-align: center;
+  }
+  .deliverd-meals {
+    justify-content: center;
+    margin-top: 3.2rem;
+  }
+  .hero-img {
+    width: 60%;
+  }
+  .logos img {
+    height: 2.4rem;
+  }
+  .step-number {
+    font-size: 7.4rem;
+  }
+  .meal-content {
+    padding: 2.4rem 3.2rem 3.2rem;
+  }
+  .section-testimonials {
+    grid-template-columns: 1fr;
+  }
+  .gallery {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .cta {
+    grid-template-columns: 3fr 2fr;
+  }
+  .cta-form {
+    grid-template-columns: 1fr;
+  }
+  .cta-form input {
+    width: 95.5%;
+  }
+  .btn--form {
+    margin-top: 1.2rem;
+  }
+
+  /*! Mobile navigation */
+  .btn-mobile-nav{
+    display: block;
+  }
+  .main-nav {
+    background-color: rgba(255, 255, 255, 0.97);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+
+    transform: translateX(100%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in;
+
+    /* Hide navigatgion */
+
+    /* Allows no transition at all */
+    /* display: none; */
+
+    /* 1) Hide mobile nav visually*/
+    opacity: 0;
+
+    /* 2) Make it unaccessible to keyboard and mouse */
+    pointer-events: none;
+
+    /* 3)Hide it from screen readers */
+    visibility: hidden;
+  }
+
+  /* Finally to open the mobile nav make all these CSS properties back to its default */
+  .nav-open .main-nav  {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+  .nav-open .icon-mobile-nav[name="close"] {
+    display: block;
+  }
+  .nav-open .icon-mobile-nav[name="menu"] {
+    display: none;
+  }
+  
+  .main-nav-list {
+    flex-direction: column;
+    gap: 4.8rem;
+  }
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    font-size: 3rem;
   }
 }
 
