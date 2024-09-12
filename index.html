@@ -2,7 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="description" content="Omnifood is an AI-powered food subscription that will make you eat healthy again, 365 days per year. It's tailored to your personal tastes and nutritional needs." />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" href="img/favicon.png">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+    <link rel="manifest" href="manifest.webmanifest">
 
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
@@ -16,11 +21,13 @@
 
     
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <title>Omnifood</title>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
+    <script defer src="script.js"></script>
+    <title>Omnifood &mdash; Never cook again!</title>
   </head>
   <body>
-    <!-- nav-open` -->
     <header class="header">
       <a href="#">  
         <img src="img/omnifood-logo.png" alt="omnifood logo" class="logo" />
@@ -29,19 +36,19 @@
       <nav class="main-nav">
         <ul class="main-nav-list">
           <li>
-            <a class="main-nav-link" href="#">How it works</a>
+            <a class="main-nav-link" href="#how">How it works</a>
           </li>
           <li>
-            <a class="main-nav-link" href="#">Meals</a>
+            <a class="main-nav-link" href="#meals">Meals</a>
           </li>
           <li>
-            <a class="main-nav-link" href="#">Testimonials</a>
+            <a class="main-nav-link" href="#testimonials">Testimonials</a>
           </li>
           <li>
-            <a class="main-nav-link" href="#">Pricing</a>
+            <a class="main-nav-link" href="#pricing">Pricing</a>
           </li>
           <li>
-            <a class="main-nav-link nav-cta" href="#">Try for free</a>
+            <a class="main-nav-link nav-cta" href="#cta">Try for free</a>
           </li>
         </ul>
       </nav>
@@ -66,10 +73,10 @@
               nutritional needs.
             </p>
 
-            <a href="#" class="btn btn--full margin-right-sm"
+            <a href="#cta" class="btn btn--full margin-right-sm"
               >Start eating well</a
             >
-            <a href="#" class="btn btn--outline">Learn more &darr;</a>
+            <a href="#how" class="btn btn--outline">Learn more &darr;</a>
 
             <div class="deliverd-meals">
               <div class="delivered-imgs">
@@ -88,11 +95,17 @@
           </div>
 
           <div class="hero-img-box">
-            <img
-              src="img/hero.png"
+            <picture>
+              <source srcset="img/hero.webp" type="image/webp" />
+
+              <source srcset="img/hero-min.png" type="image/png" />
+
+              <img
+              src="img/hero-min.png"
               class="hero-img"
               alt="Woman enjoying food, meals in storage container, and food bowls on a table"
             />
+            </picture>
           </div>
         </div>
       </section>
@@ -111,14 +124,13 @@
         </div>
       </Section>
 
-      <section class="section-how">
+      <section class="section-how" id="how">
         <div class="container">
             <span class="subheading">How it works</span>
             <h2 class="heading-secondary">Your daily dose of health in 3 simple steps</h2>
         </div>
 
           <div class="container grid grid--2-cols grid--center-v">
-            <!-- Step 01 -->
             <div class="step-text-box">
               <p class="step-number">01</p>
 
@@ -133,7 +145,6 @@
               <img src="img/app/app-screen-1.png" class="step-img" alt="iphone app preferences selection scerrn">
             </div>
             
-            <!-- Setp 02 -->
             <div class="step-img-box">
               <img src="img/app/app-screen-2.png" class="step-img" alt="iphone app meal approving plan scerrn">
             </div>
@@ -148,7 +159,6 @@
             </p>
             </div>
 
-            <!-- Setp 03 -->
             <div class="step-text-box">
               <p class="step-number">03</p>
 
@@ -167,14 +177,14 @@
         </div>
       </section>
 
-      <section class="section-meals">
+      <section class="section-meals" id="meals">
         <div class="container center-text">
           <span class="subheading">Meals</span>
           <h2 class="heading-secondary">Omnifood AI chooses from 5,000+ recipes</h2>
         </div>
       
-      <div class="container grid grid--3-cols margin-bottom-md">
-        <div class="meal meal-one">
+        <div class="container grid grid--3-cols margin-bottom-md">
+        <div class="meal">
           <img src="img/meals/meal-1.jpg" class="meal-img" alt="Japanese Gyozas">
 
           <div class="meal-content">
@@ -284,7 +294,7 @@
         </div>
       </section>
 
-      <section class="section-testimonials">
+      <section class="section-testimonials" id="testimonials">
         <div class="testimonial-container">
           <div class="testimonial-heading-container">
             <span class="subheading">Testimonials</span>
@@ -376,7 +386,7 @@
         </div>
       </section>
 
-      <section class="section-pricing">
+      <section class="section-pricing" id="pricing">
         <div class="container">
           <span class="subheading">Pricing</span>
           <h2 class="heading-secondary">
@@ -494,7 +504,7 @@
         </div>
       </section>
 
-      <section class="section-cta">
+      <section class="section-cta" id="cta">
         <div class="container">
           <div class="cta">
             <div class="cta-text-box">
@@ -547,7 +557,7 @@
             <li><a class="footer-link" href="#"><ion-icon class="social-link" name="logo-twitter"></ion-icon></a></li>
           </ul>
 
-          <p class="copyright">Copyright &copy; 2024 bt Omnifood, Inc. All rights reserved.</p>
+          <p class="copyright">Copyright &copy; <span class="year">2050</span> by Omnifood, Inc. All rights reserved.</p>
         </div>
 
         <div class="address-col">
@@ -591,6 +601,5 @@
         </nav>
       </div>
     </footer>
-
   </body>
 </html>
